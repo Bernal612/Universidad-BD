@@ -7,91 +7,126 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title>Hello, world!</title>
+    <script src="https://kit.fontawesome.com/d52a823d8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
   </head>
   <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-2">
-                <h1>University DB</h1>
-                <br><br>
+                <h1>University DataBase</h1>
+                <br><br><br>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <a class= "link" href="">
+                        <i class="fa-solid fa-chalkboard-user"></i>
                         Profesores
+                        </a>
                     </li>
                     <br>
                     <li class="list-group-item">
-                        <i class="fa fa-file" aria-hidden="true"></i>
-                        Estudiantes
+                        <a class="link" href="">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            Estudiantes
+                        </a>
                     </li>
                     <br>
                     <li class="list-group-item">
-                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                        Facultades
+                        <a class="link" href="">
+                            <i class="fa fa-school" aria-hidden="true"></i>
+                            Facultades
+                        </a>
                     </li>
                     <br>
                     <li class="list-group-item">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        Carreras
+                        <a class="link" href="">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            Carreras
+                        </a>
                     </li>
                     <br>
                     <li class="list-group-item">
-                        <i class="fa fa-comments-o" aria-hidden="true"></i>
-                        Materias
-                    <br>
+                        <a class="link" href="">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            Materias
+                        </a>
+                    </li>
+                    <br><br><br><br><br><br><br><br><br><br><br>
                     <li class="list-group-item">
-                        <div class="form-check form-switch">
-                            <i class="fa fa-moon-o" aria-hidden="true"></i>   
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                        </div>
-                    </li>  
+                        <a class="link" href="../../index.php">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Log Out
+                        </a>
+                    </li>
+                    <br>  
                 </ul>
             </div>
             <div class="col-10">
-                <nav class="navbar navbar-light bg-light">
-                    <div class="container-fluid">
-                        <form class="d-flex">
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                            <input class="form-control me-2" type="search" placeholder="Search here..." aria-label="Search">
-                        </form>
-                    </div>
-                </nav>
                 <br>
                 <div class="container-fluid">
                 <h3>Dashboard</h3>
                 <br>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
-                        <div class="card text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Total Likes</h5>
-                            <p class="card-text">50,120</p>
+                        <a class="link" href="">
+                            <div class="card text-center">
+                                <br>
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                                <div class="card-body">
+                                <h5 class="card-title">Profesores</h5>
+                                <p class="card-text">Info</p>                            
+                            </div>
                         </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col">
+                        <a class="link" href="">
                         <div class="card text-center">
-                        <i class="fa fa-comments-o" aria-hidden="true"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Comments</h5>
-                            <p class="card-text">25,120</p>
+                            <br>
+                            <i class="fa-solid fa-user"></i>                            
+                            <div class="card-body">
+                                <h5 class="card-title">Estudiantes</h5>
+                                <p class="card-text">Info</p>
+                            </div>
                         </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col">
-                        <div class="card text-center">
-                        <i class="fa fa-share" aria-hidden="true"></i>
-                        <div class="card-body">
-                            <h5 class="card-title">Total Share</h5>
-                            <p class="card-text">10,310 </p>
+                        <a class="link" href="">
+                            <div class="card text-center">
+                                <br>
+                                <i class="fa-solid fa-school"></i>                            
+                                <div class="card-body">
+                                <h5 class="card-title">Facultades</h5>
+                                <p class="card-text">Info </p>
+                            </div>
                         </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="link" href="">
+                            <div class="card text-center">
+                                <br>
+                                <i class="fa-solid fa-graduation-cap"></i>                            
+                                <div class="card-body">
+                                <h5 class="card-title">Carreras</h5>
+                                <p class="card-text">Info </p>
+                            </div>
                         </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="link" href="">
+                            <div class="card text-center">
+                            <br>
+                            <i class="fa-solid fa-book"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Materias</h5>
+                                <p class="card-text">Info </p>
+                            </div>
+                        </div>
+                        </a>
                     </div>
                 </div>
                 </div>
