@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+
+.formulario{
+    background-color:bisque;
+}
+
+.btn{
+    color: white;
+    font-size:13px;
+    text-transform: uppercase;
+    background-color: black;
+    border: 0;
+    padding: 15px;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+div .col-8{
+    background-image: url(img/libros.jpg);
+}
