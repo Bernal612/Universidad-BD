@@ -1,21 +1,23 @@
 <?php
 
-include_once('DatabaseProces.php');
-$user = $_POST['email'];
-$pass = $_POST['password'];
+include_once('DatabaseProcess.php');
 
-$user = new DatabaseProcess();
-$users->login($user,$pass);
+if(isset($_POST['submit'])){
+    $user = $_POST['email'];
+    $pass = $_POST['password'];
 
-$response = $users->login($user,$pass);
+    $users = new DatabaseProcess();
+    $users->login($user,$pass);
 
-echo $response;
+    $response = $users->login($user,$pass);
 
-if($response === "verdarero"){
-    header("Location: home.php");
+    echo $response;
+    
+    if($response === "verdarero"){
+        header("Location: ../home.php");
+    }
+    else{
+        echo '<script language = javascript">alert("Error En Datos");</script>';
+    }
 }
-else{
-    echo '<script language = javascript">alert("Error En Datos");</script>';
-}
-
 ?>

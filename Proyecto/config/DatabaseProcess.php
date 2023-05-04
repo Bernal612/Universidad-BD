@@ -9,7 +9,7 @@ class DatabaseProcess extends DatabasePDO{
     public function getAll(){
         try{
             $cnn = $this->conn();
-            $respuesta = $cnn->prepare("select * from clients");
+            $respuesta = $cnn->prepare("select * from user");
             $respuesta->execute();
             $usuarios=[];
             foreach($respuesta as $res){
@@ -26,24 +26,28 @@ class DatabaseProcess extends DatabasePDO{
             $this->user=$user;
             $this->pass=$pass;
 
+            $mi = "bernal";
+            $ps = "123";
+
             $cnn = $this->conn();
-            $stmt = $cnn->prepare("SELECT * FROM users WHERE firstname=:usernameEmail AND pass=:hash_password");
-            $stmt->bindParam("usernameEmail", $this->user,PDO::PARAM_STR);
-            $stmt->bindParam("hash_password", $this->pass,PDO::PARAM_STR);
-            $stmt->execute();
-            $count=$stmt->rowCount();
-            $data=$stmt->fetch(PDO::FETCH_OBJ);
-            $db = null;
+                $stmt = $cnn->prepare('SELECT * FROM user WHERE usuario=:usernameEmail AND pass=:hash_password');
+                $stmt->bindParam("usernameEmail", $mi,PDO::PARAM_STR);
+                $stmt->bindParam("hash_password", $ps,PDO::PARAM_STR);
+                $stmt->execute();
+                $count=$stmt->rowCount();
+                $data=$stmt->fetch(PDO::FETCH_OBJ);
+                $db = null;
+                $message = "";
             if($count){
-                $_SESSION['uid']=$data->uid;
-                return true;
+                $message = "verdadero";
             }
             else{
-                return false;
+                $message= "falso";
             }
         }catch(Exception $e){
-            echo '("error":("text":'.$e->getMessage() ."))";
+            echo '{"error":{"text":'.$e->getMessage() ."}}";
         }
+        echo $cnn;
     }
 }
 

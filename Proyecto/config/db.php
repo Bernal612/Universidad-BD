@@ -13,7 +13,7 @@ Class DatabasePDO {
 
     public function conn(){
         try{
-            $base_de_datos = new PDO('mysql:host=localhost;dbname='. $this->dbname, $this->user, $this->pass);
+            $base_de_datos = new PDO('mysql:host=localhost;dbname=' . $this->dbname, $this->user, $this->pass);
             if($base_de_datos){
                 return $base_de_datos;
             }
