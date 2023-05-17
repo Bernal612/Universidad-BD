@@ -26,28 +26,26 @@ class DatabaseProcess extends DatabasePDO{
             $this->user=$user;
             $this->pass=$pass;
 
-            $mi = "bernal";
-            $ps = "123";
-
             $cnn = $this->conn();
-                $stmt = $cnn->prepare('SELECT * FROM user WHERE usuario=:usernameEmail AND pass=:hash_password');
-                $stmt->bindParam("usernameEmail", $mi,PDO::PARAM_STR);
-                $stmt->bindParam("hash_password", $ps,PDO::PARAM_STR);
-                $stmt->execute();
-                $count=$stmt->rowCount();
-                $data=$stmt->fetch(PDO::FETCH_OBJ);
-                $db = null;
-                $message = "";
-            if($count){
-                $message = "verdadero";
+            $stmt = $cnn->prepare("SELECT * FROM user WHERE email=:usernameEmail AND pass=:hash_password");
+            $stmt->bindParam("usernameEmail", $this->user,PDO::PARAM_STR);
+            $stmt->bindParam("hash_password", $this->pass,PDO::PARAM_STR);
+            $stmt->execute();
+            $count=$stmt->rowCount();
+            $data=$stmt->fetch(PDO::FETCH_OBJ);
+            $db = null;
+            if($count)
+            {           
+                $mesage = "Verdadero";
             }
-            else{
-                $message= "falso";
-            }
+            else
+            {
+                $mesage = "Falso";
+            } 
         }catch(Exception $e){
-            echo '{"error":{"text":'.$e->getMessage() ."}}";
+            echo '("error":("text":'.$e->getMessage() ."))";
         }
-        echo $cnn;
+        return $mesage;
     }
 }
 
